@@ -21,24 +21,6 @@ $(document).ready(function(){
 });
 
 /*
-
-var topmenuTabs= document.getElementsByClassName('dropdown');
-
-for (item of topmenuTabs){
-    item.addEventListener('mouseover', openMenu)
-}
-
-function openMenu(event){
-    console.log(event.target.nextElementSibling)
-    event.target.nextElementSibling.classList.add('menu-down');
-    if(event.target.nextElementSibling.classList.open){
-        event.target.nextElementSibling.classList.remove('menu-down');
-    }
-}*/
-
-
-
-/*
 var burgerContainer= document.getElementById('burger-container');
 
 burgerContainer.addEventListener('click', openBurger);
