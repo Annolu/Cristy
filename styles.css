@@ -7,7 +7,7 @@ body{
 
 .central-panel{
     height: 100%;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
     /*border: 1px solid #ccc;*/
 }
@@ -329,13 +329,15 @@ body{
     padding: 10px 21px;
     background-color: white;
     color: #464646;
-    font-weight: bolder;
     transition: color 0.2s, background 0.2s;
     text-align: center;
     margin: 3% auto;
     display: block;
     cursor: pointer;
+    font-size: 13px;
+    font-family: 'Playfair Display', serif;    
 }
+
 .violet-section{
     background-color: #eef1f8;
     height: 385px;
@@ -345,18 +347,27 @@ body{
     float: left;
     position: relative;
     top: 60px;
-    width: 310px;
+    width: 400px;
+    font-family: 'Raleway', sans-serif;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.violet-wrapper .textbox p{
+    line-height: 21px;
 }
 
 .violet-wrapper .textbox.reversed{
     float: right;
-    width: 310px;
+    width: 445px;
+    margin: 5px 0;
+    font-size: 12px;
 }
 
 .violet-wrapper .violet-image{
     float: right;
     position: relative;
-    top: 30px;
+    top: 50px;
 }
 
 .violet-wrapper .violet-image.reversed{
@@ -369,7 +380,14 @@ body{
     font-size: 36px;
     color: #434343;
     font-family: 'Playfair Display', serif;
-    font-weight: 400; 
+    font-weight: 400;
+    margin: 0;
+}
+
+.button.green{
+    background-color: #4bb899;
+    color: white;
+    float: left;
 }
 
 .article-section{
