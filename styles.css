@@ -155,29 +155,62 @@ body{
 
 .slider-section{
     background-color: #eef1f8;
+    height: 430px;
+}
+
+.slider-textbox .view-collection{
+    font-family: 'Playfair Display', serif;
+    color: #4bb899;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: 'Kurale', serif;
+}
+
+.slider-textbox .view-collection span{
+    background-image: url(img/green-arrow.png);
+    height: 11px;
+    width: 15px;
+    display: inline-block;
+    margin-left: 7px;
 }
 
 .single-slide{
-    height: 350px;
+    height: 370px;
+}
+
+.single-slide h1{
+    color: #4bb899;
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;   
+    margin: 0;
+}
+
+.single-slide p{
+    margin: 5px 0;
+    font-size: 12px;
+    line-height: 21px;
 }
 
 .single-slide .textbox{
     float: left;
     position: relative;
-    top: 60px;
-    left: 80px;
-    width: 200px;
+    top: 86px;
+    left: 18px;
+    width: 380px;
+    font-family: 'Raleway', sans-serif;    
 }
+
 
 .single-slide .slider-image{
     float: right;
     position: relative;
-    top: 70px;
-    right: 60px;    
+    top: 100px;
+    right: 20px;    
 }
 
 .shop-section{
-    height: 870px;
+    height: 900px;
 }
 
 .shop-section .top-paragraph{
@@ -188,16 +221,34 @@ body{
 
 .shop-section .top-paragraph h1{
     text-align: center;
+    color: #313131;
 }
 
 .filter-section{
     height: 50px;
+    margin-top: 40px;
+}
+
+.filter-section .filter-burger{
+    width: 150px;
+    height: 100%;
+    display: block;
+    float: left;
     border: 1px solid #e9e9e9;
-    
+    position: relative;
+}
+
+.filter-section .shorting{
+    width: 200px;
+    height: 100%;
+    display: block;
+    float: right;
+    border: 1px solid #e9e9e9; 
+    position: relative;    
 }
 
 .items-grid{
-    display: relative;
+    margin-top: 20px;
 }
 
 .shop-item{
@@ -205,25 +256,66 @@ body{
     height: 250px;
     width: 25%;
     float: left;
-    box-sizing: border-box;    
-    /*border: 1px solid #e9e9e9;*/
+    box-sizing: border-box;
+    position: relative;
+}
+
+.shop-item .grey-layer{
+    opacity: 0;
+    background-color: rgba(0,0,0,0.5);
+    border: rgba(0,0,0,.7);
+    height:100%;
+    width:100%;
+    position: absolute;
+    transition: 200ms ease-in-out;
+}
+
+.shop-item .grey-layer:hover{
+    opacity: 1;
+}
+
+.shop-item .grey-layer .view{
+    background-image: url(img/shopbutton-eye.png);
+    height: 37px;
+    width: 38px;
+    position: absolute;
+    top: 100px;
+    left: 70px;
+    cursor: pointer;
+}
+
+.shop-item .grey-layer .bag{
+    background-image: url(img/shopbutton-bag.png);
+    height: 37px;
+    width: 38px;
+    position: absolute;
+    top: 100px;
+    left: 115px; 
+    cursor: pointer;
 }
 
 .shop-item .img-item{
-    width: 100%;
+    display: block;
+    margin: 30px auto 0;
+    height: 100px;
 }
 
 .shop-item .item-name{
     text-align: center;
+    color: #585858;
+    margin: 5px 0;    
 }
 
 .shop-item .item-price{
     text-align: center;
+    color: #4bb899;
+    margin: 5px 0;    
 }
 
 .shop-item .reting-stars{
     text-align: center;
     display: block;
+    margin: 10px 0;    
 }
 
 .clearing-div {
@@ -242,9 +334,46 @@ body{
     text-align: center;
     margin: 3% auto;
     display: block;
+    cursor: pointer;
 }
+.violet-section{
+    background-color: #eef1f8;
+    height: 385px;
+}
+
+.violet-wrapper .textbox{
+    float: left;
+    position: relative;
+    top: 60px;
+    width: 310px;
+}
+
+.violet-wrapper .textbox.reversed{
+    float: right;
+    width: 310px;
+}
+
+.violet-wrapper .violet-image{
+    float: right;
+    position: relative;
+    top: 30px;
+}
+
+.violet-wrapper .violet-image.reversed{
+    float: left;
+    position: relative;
+    top: 50px;    
+}
+
+.violet-wrapper h1{
+    font-size: 36px;
+    color: #434343;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400; 
+}
+
 .article-section{
-    height: 400px;
+    height: 430px;
     width: 100%;
 }
 
@@ -255,10 +384,36 @@ body{
 .article{
     display: inline-block;
     height: 300px;
-    width: 33%;
+    width: 30%;
     float: left;
-    box-sizing: border-box;    
-    border: 1px solid #e9e9e9;
+    box-sizing: border-box;
+    margin: 0px 13px;
+}
+
+.article img{
+    width: 100%;
+}
+
+.article h4{
+    color: #313131;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.article p{
+    font-size: 11px;
+    margin: 7px 0;
+    line-height: 20px;
+}
+
+.article>p{
+    font-family: 'Raleway', sans-serif;    
+}
+
+.article a{
+    text-decoration: none;
+    color: #4bb899;
+    
 }
 
 .footer .top-footer{
