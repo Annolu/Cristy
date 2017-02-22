@@ -2,12 +2,12 @@ body{
     margin: 0;
     padding:0;
     font-family: 'Slabo 27px', serif;
-    color: #aeaeae;
+    color: #8a8a8a;
 }
 
 .central-panel{
     height: 100%;
-    width: 75%;
+    width: 960px;
     margin: 0 auto;
     /*border: 1px solid #ccc;*/
 }
@@ -16,6 +16,7 @@ body{
     height: 40px;
     border-bottom: 1px solid #e9e9e9;
     position: relative;
+    color: #aeaeae;    
 }
 
 .left-banner{
@@ -117,7 +118,7 @@ body{
 
 #burger-container{
     position: relative;
-    margin: 25px auto;
+    margin: 37px 0;
     width: 100px;
 }
 
@@ -127,30 +128,28 @@ body{
 }
 
 #burger span{
-    background: #eee;
+    background: #464646;
     display: block;
-    width: 30px;
-    height: 4px;
-    margin-bottom: 4px;
+    width: 17px;
+    height: 2px;
+    margin-bottom: 3px;
     position: relative;
     top: 0;
-    transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s
 }
 
-#burger-container.open span:nth-child(2),
-#burger-container.open span:nth-child(3){
+#burger-container.open span:nth-child(2){
     width: 0;
     opacity: 0;
 }
 
-#burger-container.open span:nth-child(4){
+#burger-container.open span:nth-child(3){
     transform: rotate(45deg);
-    top: -14px;
+    top: -10px;
 }
 
 #burger-container.open span:nth-child(1){
     transform: rotate(-45deg);
-    top: 10px;
 }
 
 .slider-section{
@@ -166,12 +165,13 @@ body{
     font-family: 'Kurale', serif;
 }
 
-.slider-textbox .view-collection span{
-    background-image: url(img/green-arrow.png);
+.green-arrow{
+    background: url(img/green-arrow.svg) no-repeat;
     height: 11px;
     width: 15px;
     display: inline-block;
-    margin-left: 7px;
+    margin-left: 10px;
+    top: 2px;
 }
 
 .single-slide{
@@ -198,7 +198,9 @@ body{
     top: 86px;
     left: 18px;
     width: 380px;
-    font-family: 'Raleway', sans-serif;    
+    font-family: 'Raleway', sans-serif;
+    width: 420px;
+
 }
 
 
@@ -312,10 +314,16 @@ body{
     margin: 5px 0;    
 }
 
-.shop-item .reting-stars{
+.shop-item .rating-stars{
     text-align: center;
     display: block;
     margin: 10px 0;    
+}
+
+.shop-item .rating-stars img{
+    width: 10px;
+    position: relative;
+    margin: 2px;
 }
 
 .clearing-div {
@@ -329,13 +337,18 @@ body{
     padding: 10px 21px;
     background-color: white;
     color: #464646;
-    transition: color 0.2s, background 0.2s;
+    transition: color 0.2s, background-color 0.2s;
     text-align: center;
     margin: 3% auto;
     display: block;
     cursor: pointer;
     font-size: 13px;
-    font-family: 'Playfair Display', serif;    
+    font-family: 'Playfair Display', serif;
+}
+
+.button:hover{
+    background-color: #4bb899;
+    color: white;
 }
 
 .violet-section{
@@ -355,6 +368,7 @@ body{
 
 .violet-wrapper .textbox p{
     line-height: 21px;
+    margin: 0;
 }
 
 .violet-wrapper .textbox.reversed{
@@ -362,6 +376,21 @@ body{
     width: 445px;
     margin: 5px 0;
     font-size: 12px;
+}
+
+.violet-wrapper .textbox.reversed .color-picker{
+    background-image: url(img/color-selectors.png);
+    height: 30px;
+    width: 90px;
+    display: block;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.violet-wrapper .textbox.reversed .rating-stars img{
+    width: 10px;
+    position: relative;
+    margin: 2px;
 }
 
 .violet-wrapper .violet-image{
@@ -388,6 +417,13 @@ body{
     background-color: #4bb899;
     color: white;
     float: left;
+    transition: color 0.2s, background-color 0.2s;    
+}
+
+.button.green:hover{
+    color: #464646;
+    background-color: white;
+    color: #464646;
 }
 
 .article-section{
@@ -406,10 +442,28 @@ body{
     float: left;
     box-sizing: border-box;
     margin: 0px 13px;
+    position: relative;
 }
 
 .article img{
     width: 100%;
+}
+
+.article .date-square{
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    color: white;
+    background-color: #4bb899;
+    top: 15px;
+    left: 15px;
+}
+
+.article .date-square p{
+    text-align: center;
+    font-size: 12px;
+    margin: 6px;
+    line-height: 12px;
 }
 
 .article h4{
@@ -449,11 +503,91 @@ body{
     width: 25%;
     box-sizing: border-box;
     float: left;
-    border: 1px solid #e9e9e9;    
 }
 
 .footer .bottom-footer{
     height: 130px;
     width: 100%;
     background-color: #333333;
+}
+
+.nav-panels h4{
+    color: #464646;
+    margin: 0;
+    padding-left: 38px;
+}
+
+.nav-panels ul{
+}
+
+.nav-panels li{
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.nav-panels li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-panels li strong{
+    color: #464646;
+}
+
+.nav-panels .contact li{
+    line-height: 18px;    
+}
+
+.nav-panels .contact li:first-of-type{
+    margin-bottom: 7px;
+}
+
+.nav-panels .getsocial img{
+    width: 13px;
+    padding-right: 10px;
+}
+
+.bottom-footer p{
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.bottom-footer .copyright{
+    float: left;
+}
+
+.bottom-footer input{
+    background-color: inherit;
+    border: none;
+    color: #8a8a8a;
+    font-size: 14px;
+    font-family: 'Slabo 27px', serif;
+    width: 160px;
+    transition: all ease-in-out 0.4s;
+    cursor: pointer;
+}
+
+.bottom-footer input:focus{
+    outline: none;
+}
+
+.bottom-footer input:focus::-webkit-input-placeholder{
+    color:transparent;
+}
+
+
+.bottom-footer .newsletter{
+    float: right;
+    border-bottom: 2px solid #8a8a8a;
+    cursor: pointer;
+    width: 187px;
+}
+
+.bottomfooter-wrapper{
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    display: block;
 }
