@@ -12,6 +12,10 @@ $(document).ready(function(){
        arrows: true
       
     });
+    
+    $(".sorting-button").on('click', function(){
+        $(".dropdown-sorting li").toggleClass("open");
+    });
     /*
     $(".dropdown-toggle").on('mouseover', function(){
         $('.dropdown-menu').toggleClass("menu-down");

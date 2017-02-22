@@ -54,10 +54,12 @@
                     <li class="burger-menu">              
                         <div id="burger-container">
                             <div id="burger">
-                               <span>&nbsp;</span>
-                               <span>&nbsp;</span>
-                               <span>&nbsp;</span>
-                            </a>
+                                <a>
+                                   <span>&nbsp;</span>
+                                   <span>&nbsp;</span>
+                                   <span>&nbsp;</span>
+                                </a>
+                            </div>
                         </div>
                     </li>
                     <li class="central-logo">
@@ -76,7 +78,7 @@
                         <div class="textbox">
                             <h1>New Arrivals</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu aliquam arcu. Consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a class="view-collection">View Collection<span class="green-arrow"></span></a>
+                            <a href="#" class="view-collection">View Collection<span class="green-arrow"></span></a>
                         </div>
                         <div class="slider-image">
                             <img src="img/shoe.png">
@@ -88,7 +90,7 @@
                         <div class="textbox">
                             <h1>New Arrivals</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu aliquam arcu. Consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a class="view-collection">View Collection <span class="green-arrow"></span></a>
+                            <a href="#" class="view-collection">View Collection <span class="green-arrow"></span></a>
                         </div>
                         <div class="slider-image">
                             <img src="img/shoe.png">
@@ -100,7 +102,7 @@
                         <div class="textbox">
                             <h1>New Arrivals</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu aliquam arcu. Consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <a class="view-collection">View Collection <span class="green-arrow"></span></a>
+                            <a href="#" class="view-collection">View Collection <span class="green-arrow"></span></a>
                         </div>
                         <div class="slider-image">
                             <img src="img/shoe.png">
@@ -117,8 +119,29 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu aliquam arcu. Aenean et finibus dolor.</p>
             </div>
             <div class="filter-section">
-                <div class="filter-burger"></div>
-                <div class="shorting"></div>
+                <div class="filter-burger">
+                    <div id="burger-container">
+                        <div id="burger">
+                            <a>
+                               <span>&nbsp;</span>
+                               <span>&nbsp;</span>
+                               <span>&nbsp;</span>
+                            </a>
+                        </div>
+                    </div>
+                    <p>FILTER</p>
+                </div>
+                <div class="sorting">
+                    <button class="button sorting-button">
+                    Default sorting
+                        <span class="emptyarrow-down"></span>
+                    </button>
+                    <ul class="dropdown-sorting">
+                        <li><a href="#">Sorting 1</a></li>
+                        <li><a href="#">Sorting 2</a></li>
+                        <li><a href="#">Sorting 3</a></li>
+                     </ul>
+                </div>
             </div>
             <div class="items-grid">
                 <div class="shop-item">
@@ -360,7 +383,7 @@
                     </div>
                     <div class="newsletter">
                         <form>
-                        <input placeholder="Subscribe to our newsletter:"><span class="green-arrow"></span>
+                        <input placeholder="Subscribe to our newsletter:"><a href="#"><span class="green-arrow"></span></a>
                         </form>    
                     </div>
                 </div>    
