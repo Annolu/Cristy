@@ -52,6 +52,52 @@ body a{
     padding-top: 12px;
 }
 
+/*//dropdonw//*/
+
+
+.button.dropdown-button{
+    border: 1px solid #e8e8e8;    
+}
+
+.button.dropdown-button:hover{
+    background-color: white;
+    color: #313131;
+}
+
+.dropdown-menu .sorting{
+    padding: 6px;
+    border: none;
+    width: 85px;
+    margin: 0;
+    border: none;
+    border-right: 1px solid #e9e9e9;
+}
+
+.dropdown-menu .dropdown-button{
+    margin: 0;
+    border: none;
+    color: #aeaeae;
+    font-family: 'Slabo 27px', serif;
+}
+
+.top-right-menu .submenu-dropdown{
+    top: 9px;
+}
+
+.top-right-menu .submenu-dropdown li{
+    margin: 0;
+    height: auto;
+    width: 55px;
+    cursor: pointer;
+    position: relative;
+    right: 6px;
+    font-family: 'Slabo 27px', serif;
+}
+
+.top-right-menu .submenu-dropdown li:hover > a{
+    color: #3e3e3e;
+}
+/*
 .dropdown-submenu{
     display: none;
 }
@@ -60,21 +106,22 @@ body a{
     list-style-type: none;
     margin: 0;
     border-right: none;
-    float:none;
+    float: none;
     position: relative;
-    padding: 0;
-    border:1px solid #eaeaea;
+    border: 1px solid #eaeaea;
     height: 30px;
     top: 8px;
+    width: 70px;
 }
 .dropdown-menu li:hover >.dropdown-submenu{
     display: block;
     padding: 0;
 }
-
+*/
+/*
 .top-menu .top-right-menu ul li:nth-last-child(1){
     margin: 0;
-}
+}*/
 
 .top-menu .top-right-menu a{
     color: #aeaeae;
@@ -97,6 +144,28 @@ body a{
     margin-left: 7px;
 }
 
+.submenu-dropdown .login{
+    background-image: url(img/login.svg);
+    height: 16px;
+    width: 16px;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: 6px;
+}
+
+.submenu-dropdown .user{
+    background-image: url(img/user.svg);
+    height: 16px;
+    width: 16px;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+    left: 6px;
+}
+
 .nav-bar{
     height: 90px;
     border-bottom: 1px solid #e9e9e9;
@@ -117,6 +186,42 @@ body a{
 .central-logo img{
     position: relative;
     padding: 18px 84px;
+}
+
+.basket-search-box .basket{
+    background-image: url(img/basket-icon.png);
+    height: 27px;
+    width: 27px;
+    float: right;
+    /* display: inline-block; */
+    position: relative;
+    top: 31px;
+    right: 78px;
+}
+
+.basket-search-box input[type=text] {
+    width: 0;
+    box-sizing: border-box;
+    /* border: 2px solid #ccc; */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url(img/search.svg);
+    background-position: 10px 13px;
+    background-repeat: no-repeat;
+    padding: 15px 5px 5px 31px;
+    -webkit-transition: width 0.4s ease-in-out;
+    float: right;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    top: 24px;
+    border: none;
+}
+
+.basket-search-box input[type=text]:focus {
+    border: 1px solid #ccc;
+    outline: none;
+    width: 100px;
 }
 
 #burger-container{
@@ -238,17 +343,24 @@ body a{
 }
 
 .filter-section .filter-burger{
-    width: 150px;
-    height: 45px;
+    width: 80px;
+    height: 42px;
     display: block;
     float: left;
     position: relative;
     cursor: pointer;
+    border: 1px solid #fff;
+    transition: all 200ms ease-in-out;
+}
+
+.filter-section .filter-burger:hover{
+    border: 1px solid #e8e8e8;
+    background-color: rgba(200,200,200,0.1);
 }
 
 .filter-section .filter-burger #burger-container{
     position: relative;
-    margin: 15px 0;
+    margin: 15px 4px;
     display: inline-block;    
 }
 
@@ -283,18 +395,27 @@ body a{
     background-image: url(img/)
 }
 
-.dropdown-sorting{
+.button.sorting-button{
+    border: 1px solid #e8e8e8;    
+}
+
+.button.sorting-button:hover{
+    background-color: white;
+    color: #313131;
+}
+
+.submenu-dropdown{
     z-index: 1;
     position: relative;
     padding: 0;
-    margin: 0;
+    margin: 0;    
 }
 
-.dropdown-sorting li{
+.submenu-dropdown li{
     list-style-type: none;
-    border-bottom: 1px solid #8a8a8a;
-    border-left: 1px solid #8a8a8a;
-    border-right: 1px solid #8a8a8a;
+    border-bottom: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
     padding: 10px 21px;
     background-color: white;
     font-family: 'Playfair Display', serif;
@@ -302,24 +423,28 @@ body a{
     opacity: 0;
 }
 
-.dropdown-sorting li a{
+.filter-section .submenu-dropdown li{
+    width: 105px;
+}
+
+.submenu-dropdown li a{
     color: #464646;
 }
 
-.dropdown-sorting li:first-of-type{
-    border-top: 1px solid #8a8a8a;
+.submenu-dropdown li:first-of-type{
+    border-top: 1px solid #e8e8e8;
 }
 
-.dropdown-sorting li:nth-child(1).open{
-    animation: fadein 200ms ease-in-out forwards;
+.submenu-dropdown li:nth-child(1).open{
+    animation: fadein 400ms ease-in-out forwards;
 }
 
-.dropdown-sorting li:nth-child(2).open{
-    animation: fadein 200ms ease-in-out forwards 100ms;
+.submenu-dropdown li:nth-child(2).open{
+    animation: fadein 400ms ease-in-out forwards 100ms;
 }
 
-.dropdown-sorting li:nth-child(3).open{
-    animation: fadein 200ms ease-in-out forwards 200ms;
+.submenu-dropdown li:nth-child(3).open{
+    animation: fadein 400ms ease-in-out forwards 200ms;
 }
 
 @keyframes fadein{
@@ -336,14 +461,6 @@ body a{
     }
 }
 
-.button.sorting-button{
-    border: 1px solid #8a8a8a;    
-}
-
-.button.sorting-button:hover{
-    background-color: white;
-    color: #313131;
-}
 .button.sorting-button .emptyarrow-down{
     background: url(img/down-arrow.svg) no-repeat;
     height: 10px;
@@ -351,28 +468,6 @@ body a{
     display: inline-block;
     margin-left: 15px;
 }
-/*
-
-.filter-section .sorting select{
-    background-color: white;
-    float: right;
-    display: block;
-    height: 35px;
-    width: 120px;
-    -webkit-appearance: none; 
-    -moz-appearance: none;
-    appearance: none;
-}
-
-.filter-section .sorting select:focus{
-    background: url(img/down-arrow.svg) no-repeat;
-    outline: none;    
-}
-
-.filter-section .sorting select arrow-down{
-    height: 15px;
-    width: 20px;
-}*/
 
 .items-grid{
     margin-top: 20px;
@@ -716,3 +811,4 @@ body a{
     padding-top: 53px;
     display: block;
 }
+

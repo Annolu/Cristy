@@ -22,14 +22,38 @@
                 </div>
                 <div class="top-right-menu">
                     <ul class="dropdown-menu">
-                        <li class="dropdown-lang">
-                            <a href="#" class="dropdown-toggle">ENG<span class="arrow-down"></span></a>
-                            <ul class="dropdown-submenu">
+                        <li class="sorting">
+                            <button class="button dropdown-button">
+                            ENG
+                                <span class="arrow-down"></span>
+                            </button>
+                            <ul class="submenu-dropdown">
                                 <li><a href="#">SP</a></li>
                                 <li><a href="#">FR</a></li>
                                 <li><a href="#">CH</a></li>
-                            </ul>
+                             </ul>
                         </li>
+                        <li class="sorting">
+                            <button class="button dropdown-button">
+                            $USD
+                                <span class="arrow-down"></span>
+                            </button>
+                            <ul class="submenu-dropdown">
+                                <li><a href="#">€EUR</a></li>
+                                <li><a href="#">£BP</a></li>
+                             </ul>
+                        </li>
+                        <li class="sorting">
+                            <button class="button dropdown-button">
+                            Login
+                                <span class="arrow-down"></span>
+                            </button>
+                            <ul class="submenu-dropdown">
+                                <li><a href="#">Profile<span class="user"></a></li>
+                                <li><a href="#">Log in<span class="login"></span></a></li>
+                             </ul>
+                        </li>
+                        <!--
                         <li class="dropdown-cur">
                             <a href="#" class="dropdown-toggle">$USD<span class="arrow-down"></span></a>
                             <ul class="dropdown-submenu">
@@ -43,7 +67,7 @@
                                 <li><a href="#">Profile</a></li>
                                 <li><a href="#">Log out</a></li>
                             </ul>
-                        </li> 
+                        </li> -->
                     </ul>    
                 </div>
             </div>  
@@ -65,7 +89,10 @@
                     <li class="central-logo">
                         <img src="img/logo-cristy.png">
                     </li>
-                    <li class="basket-search-box"></li>
+                    <li class="basket-search-box">
+                        <span class="basket"></span>
+                        <input type="text" name="search">
+                    </li>
                 </ul>    
             </div>    
         </div>
@@ -136,7 +163,7 @@
                     Default sorting
                         <span class="emptyarrow-down"></span>
                     </button>
-                    <ul class="dropdown-sorting">
+                    <ul class="submenu-dropdown sorting">
                         <li><a href="#">Sorting 1</a></li>
                         <li><a href="#">Sorting 2</a></li>
                         <li><a href="#">Sorting 3</a></li>
