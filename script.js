@@ -9,17 +9,18 @@ $(document).ready(function(){
        speed: 500,
        swipe: true,
        cssEase: 'ease',
-       arrows: true
+       nextArrow: '<button type="button" class="arrow-next"><img src="img/right-arrow-circular-button.svg" ></button>',
+       prevArrow: '<button type="button" class="arrow-prev"><img src="img/back-arrow-circular-symbol.svg" ></button>'
       
     });
     
     // click on body makes the top dropdown menu disappear
 
-    var body= document.getElementsByTagName('body')[0];
-
+    var body= document.getElementById('body-container');
+    
     body.addEventListener('click', function(event){
-        console.log(event.target.nextElementSibling)
-        console.log(event.target.classList.contains('dropdown-button'));
+        //console.log(event.target.nextElementSibling)
+        //console.log(event.target.classList.contains('dropdown-button'));
         
         if(event.target.classList.contains('dropdown-button')){
             //event.target.nextElementSibling.children[0].classList.remove('open');
@@ -50,4 +51,27 @@ $(document).ready(function(){
     $(".sorting-button").on('click', function(){
         $(".filter-section .sorting li").toggleClass("open");
     });
+    
+    var burger= document.getElementById('burger');
+    var closeBtn= document.getElementById('closebtn');
+    var sidebar= document.getElementById('mySidenav');
+    
+    burger.addEventListener('click', openNav);
+    closeBtn.addEventListener('click', closeNav)
+    
+    function openNav(){
+        if(body.classList.contains('down')){
+            body.classList.remove('down');
+            //sidebar.classList.remove('fade-in'); 
+        }else{
+            body.classList.add('down');
+            //sidebar.classList.add('fade-in');
+        }
+    }
+
+    function closeNav() {
+        body.classList.remove('down');
+        sidebar.classList.remove('fade-in');
+        $("#burger-container").removeClass('open');
+    }
 });
