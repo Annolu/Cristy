@@ -9,8 +9,8 @@ $(document).ready(function(){
        speed: 500,
        swipe: true,
        cssEase: 'ease',
-       nextArrow: '<button type="button" class="arrow-next"><img src="img/right-arrow-circular-button.svg" ></button>',
-       prevArrow: '<button type="button" class="arrow-prev"><img src="img/back-arrow-circular-symbol.svg" ></button>'
+       nextArrow: '<button type="button" class="arrow arrow-next"><img src="img/arrows/right-arrow-circular-button.svg" ></button>',
+       prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/arrows/back-arrow-circular-symbol.svg" ></button>'
       
     });
     
@@ -62,10 +62,8 @@ $(document).ready(function(){
     function openNav(){
         if(body.classList.contains('down')){
             body.classList.remove('down');
-            //sidebar.classList.remove('fade-in'); 
         }else{
             body.classList.add('down');
-            //sidebar.classList.add('fade-in');
         }
     }
 
