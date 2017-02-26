@@ -23,7 +23,6 @@ body a{
 }
 
 .central-panel {
-    height: 100%;
     max-width: 960px;
     margin: 0 150px;
 }
@@ -397,7 +396,7 @@ body a{
 }
 
 .shop-section .top-paragraph{
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto;
     padding-top: 60px;
 }
@@ -660,7 +659,7 @@ body a{
     float: left;
     position: relative;
     top: 60px;
-    width: 400px;
+    max-width: 400px;
     font-family: 'Raleway', sans-serif;
     margin: 5px 0;
     font-size: 12px;
@@ -697,7 +696,7 @@ body a{
     float: right;
     position: relative;
     top: 50px;
-    height: 200px;
+    /*height: 200px;*/
 }
 
 .violet-wrapper .violet-image.reversed{
@@ -803,7 +802,7 @@ body a{
     width: 25%;
     box-sizing: border-box;
     float: left;
-        word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .footer .bottom-footer{
@@ -837,7 +836,7 @@ body a{
 }
 
 .nav-panels .contact li{
-    line-height: 18px;    
+    line-height: 20px;    
 }
 
 .nav-panels .contact li:first-of-type{
@@ -915,7 +914,7 @@ body a{
     }
     
     .violet-wrapper .violet-image.reversed{
-        /*top: -120px;*/
+        top: -120px;
         float: right;
     }
     
@@ -938,6 +937,7 @@ body a{
 }
 
 @media screen and (max-width: 970px){
+    
     .central-panel{
         margin: 0 100px;
     }
@@ -991,7 +991,150 @@ body a{
         display: none;
     }
     
+    .article-section{
+        height: 380px;
+    }
+    
     .footer .top-footer{
         height: 260px;
     }
+}
+
+@media screen and (max-width: 750px){
+    
+    .central-panel {
+        margin: 0px 80px;
+    }
+    .shop-section .shop-item{
+        width: 46%;
+    }
+    
+    .shop-section .shop-item:nth-child(n+5){
+        display: none;
+    }
+    
+    .article-section{
+        height: auto;
+    }
+    
+    .article{
+        height: auto;
+        width: 100%;
+        margin: 13px 0;
+    }
+    
+    .footer .top-footer{
+        height: 100%;
+    }
+    
+    .footer .top-footer .nav{
+        width: 50%;
+    }
+    
+    .footer .top-footer .nav{
+        height: 210px;
+        margin: 10px 0;
+    }
+    
+    .nav-panels li{
+        font-size: 17px;
+        line-height: 28px;
+    }
+    
+    .shoe-image{
+        content:url(img/shoes/shoe-small.png);
+    }
+    
+    .shoe-image2{
+        content:url(img/shoes/shoe2-small.png);
+    }    
+    
+    .shoe-image3{
+        content:url(img/shoes/shoe3-small.png);
+    }    
+        
+    .single-slide .slider-image{
+        top: 0px;
+    }
+    
+    .single-slide .textbox{
+        width: 325px;
+    }
+    
+    .violet-wrapper .violet-image{
+        top: -40px;
+    }
+    
+    .violet-wrapper .violet-image.reversed{
+        top: -10px;
+    }
+    
+    .violet-section {
+    height: 370px;
+}
+    
+}
+
+@media screen and (max-width: 550px){
+    
+    .left-banner{
+        float: none;
+        text-align: center;
+    }
+    
+    .central-panel{
+        margin: 0px 50px;
+    }
+        
+    .shoe-image{
+        content:url(img/shoes/shoe-smaller.png);
+    }
+    
+    .shoe-image2{
+        content:url(img/shoes/shoe2-smaller.png);
+    }    
+    
+    .shoe-image3{
+        content:url(img/shoes/shoe3-smaller.png);
+    }
+
+    .slider-section{
+        height: 380px;
+    }
+    
+    .single-slide .textbox{
+        width: 300px;
+    }
+    
+    .single-slide h1{
+        font-size: 40px;
+    }
+    
+    .single-slide p{
+        font-size: 11px;
+    }
+    
+    .arrow.arrow-prev {
+        right: 40px;
+    }
+    
+    .arrow.arrow-next{
+        left: 40px;
+    }
+    
+    .bottom-footer .copyright{
+        float: none;
+        margin: 15px 0;
+        text-align: center;
+    }
+    
+    .bottom-footer .newsletter{
+        float: none;
+        margin: 30px auto;
+    }
+    
+    .footer .bottom-footer{
+        height: 180px;
+    }
+
 }
