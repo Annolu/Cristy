@@ -22,10 +22,10 @@ body a{
     text-decoration: none;
 }
 
-.central-panel{
+.central-panel {
     height: 100%;
-    width: 960px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: 0 150px;
 }
 
 .sidenav {
@@ -222,7 +222,7 @@ body a{
 
 .central-logo img{
     position: relative;
-    padding: 18px 84px;
+    padding: 18px 25%;
 }
 
 .basket-search-box .basket{
@@ -392,7 +392,7 @@ body a{
 }
 
 .shop-section{
-    height: 900px;
+    height: auto;
     background: white;
 }
 
@@ -549,11 +549,12 @@ body a{
 
 .shop-item{
     display: inline-block;
-    height: 250px;
-    width: 25%;
+    max-height: 250px;
+    width: 21%;
     float: left;
     box-sizing: border-box;
     position: relative;
+    margin: 2%;
 }
 
 .shop-item .grey-layer{
@@ -576,7 +577,7 @@ body a{
     width: 38px;
     position: absolute;
     top: 100px;
-    left: 70px;
+    left: 30%;
     cursor: pointer;
 }
 
@@ -586,14 +587,15 @@ body a{
     width: 38px;
     position: absolute;
     top: 100px;
-    left: 115px; 
+    left: 55%; 
     cursor: pointer;
 }
 
 .shop-item .img-item{
     display: block;
     margin: 30px auto 0;
-    height: 100px;
+    max-height: 100px;
+    width: 100%;
 }
 
 .shop-item .item-name{
@@ -633,7 +635,7 @@ body a{
     color: #666666;
     transition: color 0.2s, background-color 0.2s;
     text-align: center;
-    margin: 3% auto;
+    margin: 3% auto 6%;
     display: block;
     cursor: pointer;
     font-size: 13px;
@@ -671,7 +673,7 @@ body a{
 
 .violet-wrapper .textbox.reversed{
     float: right;
-    width: 445px;
+    max-width: 445px;
     margin: 5px 0;
     font-size: 12px;
 }
@@ -679,7 +681,7 @@ body a{
 .violet-wrapper .textbox.reversed .color-picker{
     background-image: url(img/color-selectors.png);
     height: 30px;
-    width: 90px;
+    width: 85px;
     display: block;
     margin-top: 5px;
     cursor: pointer;
@@ -695,6 +697,7 @@ body a{
     float: right;
     position: relative;
     top: 50px;
+    height: 200px;
 }
 
 .violet-wrapper .violet-image.reversed{
@@ -736,10 +739,10 @@ body a{
 .article{
     display: inline-block;
     height: 300px;
-    width: 30%;
+    width: 29%;
     float: left;
     box-sizing: border-box;
-    margin: 0px 13px;
+    margin: 0px 2%;
     position: relative;
 }
 
@@ -800,6 +803,7 @@ body a{
     width: 25%;
     box-sizing: border-box;
     float: left;
+        word-wrap: break-word;
 }
 
 .footer .bottom-footer{
@@ -883,4 +887,111 @@ body a{
 .bottomfooter-wrapper{
     padding-top: 53px;
     display: block;
+}
+
+/*////////////////////////// media queries /////////////////////////*/
+
+@media screen and (max-width: 1234px){
+    
+    .single-slide .slider-image{
+        top: -25px;
+    }
+    
+    .single-slide .textbox{
+        top: 20px;
+    }
+    
+    .violet-wrapper .violet-image{
+        top: -170px;
+    }
+
+}
+
+@media screen and (max-width: 1175px){
+        
+    .violet-wrapper .textbox.reversed{
+        float: left;
+        top: 35px;
+    }
+    
+    .violet-wrapper .violet-image.reversed{
+        /*top: -120px;*/
+        float: right;
+    }
+    
+    .violet-wrapper .textbox{
+        top: 20px;
+    }
+    
+
+}
+
+@media screen and (max-width: 1050px){
+        
+    .violet-section{
+        height: 430px;
+    }
+    
+        .violet-wrapper .violet-image{
+        top: -110px;
+    }
+}
+
+@media screen and (max-width: 970px){
+    .central-panel{
+        margin: 0 100px;
+    }
+    
+    .arrow.arrow-next{
+        left: 80px;
+    }
+    
+    .arrow.arrow-prev{
+        right: 80px;
+    }
+    
+    .single-slide .textbox{
+        top: 0px;
+    }
+    
+    .single-slide .slider-image{
+        top: -35px;
+    }
+    
+    .violet-section{
+        height: 430px;
+    }
+    
+    .violet-wrapper .textbox{
+        top: 30px;
+    }
+    
+    .violet-wrapper .violet-image{
+        top: -100px;
+    }
+    
+    .violet-wrapper .violet-image.reversed{
+        top: -80px;
+    }
+    
+    shop-section .shop-item .grey-layer .view{
+        left: 20%;
+    }
+    
+    shop-section .shop-item .grey-layer .bag{
+        left: 55%;
+    }
+    
+    .shop-section .shop-item{
+        width: 29%;
+    }
+    
+      
+    .shop-section .shop-item:nth-child(n+7){
+        display: none;
+    }
+    
+    .footer .top-footer{
+        height: 260px;
+    }
 }
