@@ -1,35 +1,24 @@
 $(document).ready(function(){
+    
+    //body animation for burger menu
+    
     $("#burger-container").on('click', function(){
         $(this).toggleClass("open");
     });
+
+    //slider
     
     $('.slider').slick({
-       adaptiveHeight: true,
-       infinite: true,
-       speed: 500,
-       swipe: true,
-       cssEase: 'ease',
-       nextArrow: '<button type="button" class="arrow arrow-next"><img src="img/arrows/right-arrow-circular-button.svg" ></button>',
-       prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/arrows/back-arrow-circular-symbol.svg" ></button>'
-      
+        adaptiveHeight: true,
+        infinite: true,
+        speed: 500,
+        swipe: true,
+        cssEase: 'ease',
+        dots:true,
+        arrows:true,
+         nextArrow: '<button type="button" class="arrow arrow-next"><img src="img/arrows/right-arrow-circular-button.svg"></button>',
+         prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/arrows/back-arrow-circular-symbol.svg"></button>'
     });
-    
-    // click on body makes the top dropdown menu disappear
-
-    var body= document.getElementById('body-container');
-    
-    body.addEventListener('click', function(event){
-        //console.log(event.target.nextElementSibling)
-        //console.log(event.target.classList.contains('dropdown-button'));
-        
-        if(event.target.classList.contains('dropdown-button')){
-            //event.target.nextElementSibling.children[0].classList.remove('open');
-            //$(".dropdown-menu .sorting li").removeClass("open");
-        }
-        else{
-            $(".dropdown-menu .sorting li").removeClass("open");
-        }
-    })
     
     //make the top dropdown menu appear
     
@@ -48,9 +37,28 @@ $(document).ready(function(){
         $(list).toggleClass("open");
     });
     
+    //toggle shop sorting menu
+    
     $(".sorting-button").on('click', function(){
         $(".filter-section .sorting li").toggleClass("open");
     });
+    
+    var body= document.getElementById('body-container');
+    
+    body.addEventListener('click', function(event){
+        
+        // click on body makes the top dropdown menu disappear
+        
+        if(!event.target.classList.contains('dropdown-button')){
+            $(".dropdown-menu .sorting li").removeClass("open");
+        }
+        
+        // click on body makes the shop sorting menu disappear
+        
+        if(!event.target.classList.contains('sorting-button')){
+            $(".filter-section .sorting li").removeClass("open");
+        }
+    })
     
     var burger= document.getElementById('burger');
     var closeBtn= document.getElementById('closebtn');
@@ -71,5 +79,5 @@ $(document).ready(function(){
         body.classList.remove('down');
         sidebar.classList.remove('fade-in');
         $("#burger-container").removeClass('open');
-    }
+    } 
 });
