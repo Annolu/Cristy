@@ -29,6 +29,8 @@ h1{
 h3{
   font-size: 16px;
   margin: 5px 0 0 0;
+  margin: 0;
+  padding: 5px 0;
 }
 
 .clear-fix {
@@ -507,6 +509,13 @@ h3{
     float: right;
     position: relative;
     font-family: "Raleway", sans-serif;
+    .submenu-dropdown{
+      position: absolute;
+      top: 40px;
+      li{
+        padding: 10px 78px 10px 15px;
+      }
+    }
     .sorting-button{
       border: 1px solid $border-colour;
       border: 1px solid #e8e8e8;
@@ -696,10 +705,14 @@ h3{
       margin: 7px 0;
       line-height: 20px;
       font-weight: 500;
+
     }
     a{
       color: $main-green;
       font-weight: 500;
+      &:hover{
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -726,6 +739,7 @@ h3{
   }
   .bottom-footer{
     background-color: $main-bg-dark;
+    margin-top: 20px;
     p{
       margin: 5px 0;
       font-size: 14px;
