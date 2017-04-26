@@ -81,29 +81,35 @@ $(document).ready(function(){
   }
 
   var i=1;
+  var x=1;
 
-  while (i<4){
-
-    var shopItem= '<div class="shop-item">'+
-                      '<div class="grey-layer">'+
-                          '<div class="buttons-g">'+
-                              '<button class="view"></button>'+
-                              '<button class="bag"></button>'+
-                          '</div>'+
-                      '</div>'+
-                      '<img class="img-item" src="img/shoes/shoe-item'+i+'.jpg">'+
-                      '<div class="item-description">'+
-                        '<p class="item-name">Sperry Top-Slider Lanyard</p>'+
-                        '<p class="item-price">$300.00</p>'+
-                        '<span class="rating-stars">'+
-                            '<img src="img/star.svg">'+
-                            '<img src="img/star.svg">'+
-                            '<img src="img/star-grey.svg">'+
-                            '<img src="img/star-grey.svg">'+
-                        '</span>'+
-                      '</div>'+
-                    '</div>';
-    $('.items-grid').append(shopItem);
+  while (i<=2){
+    while(x<=4){
+      var shopItem= '<div class="shop-item">'+
+                        '<div class="grey-layer">'+
+                            '<div class="buttons-g">'+
+                                '<button class="view"></button>'+
+                                '<button class="bag"></button>'+
+                            '</div>'+
+                        '</div>'+
+                        '<img class="img-item" src="img/shoes/shoe-item'+x+'.jpg">'+
+                        '<div class="item-description">'+
+                          '<p class="item-name">Sperry Top-Slider Lanyard</p>'+
+                          '<p class="item-price">$300.00</p>'+
+                          '<span class="rating-stars">'+
+                              '<img src="img/star.svg">'+
+                              '<img src="img/star.svg">'+
+                              '<img src="img/star-grey.svg">'+
+                              '<img src="img/star-grey.svg">'+
+                          '</span>'+
+                        '</div>'+
+                      '</div>';
+      $('.items-grid').append(shopItem);
+      x++;
+    }
+    if(x>3){
+      x=1;
+    }
     i++;
   }
 

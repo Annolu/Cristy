@@ -551,6 +551,9 @@ h3{
   box-sizing: border-box;
   position: relative;
   margin: 0 2%;
+  // &:nth-child(n+9){
+  //   display: none;
+  // }
   .item-description{
     position: relative;
     bottom: 15px;
