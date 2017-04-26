@@ -1,14 +1,8 @@
 $(document).ready(function(){
 
   createShopSection()
-    //body animation for burger menu
-
-  $("#burger-container").on('click', function(){
-      $(this).toggleClass("open");
-  });
 
   //slider
-
   $('.slider').slick({
     adaptiveHeight: true,
     infinite: true,
@@ -22,7 +16,6 @@ $(document).ready(function(){
   });
 
   //make the top dropdown menu appear
-
   $(".dropdown-button").on('click', function(event){
     event.preventDefault();
 
@@ -31,59 +24,50 @@ $(document).ready(function(){
     //dropdown-menu lists
     var lists = $(".dropdown-button").next();
 
-      for (singleList of lists){
+    for (singleList of lists){
 
-        if(singleList.children==clickedList){
-          $(clickedList).toggleClass("open");
-        }else{
-          for(item of singleList.children){
-            item.classList.remove('open');
-          }
+      if(singleList.children==clickedList){
+        $(clickedList).toggleClass("open");
+      }else{
+        for(item of singleList.children){
+          item.classList.remove('open');
         }
       }
-
-    //hide menus if target is not a button  
-    $(".sorting-button").on('click', function(){
-      $(".filter-section .sorting li").toggleClass("open");
-    });
+    }
   });
 
-  var body= document.getElementById('body-container');
+  //toggle shop sorting menu
 
-  body.addEventListener('click', function(event){
+  $(".sorting-button").on('click', function(){
+    $(".filter-section .sorting li").toggleClass("open");
+  });
+
+  $('body').click(closeMenus)
+
+    function closeMenus(event){
 
     // click on body makes the top dropdown menu disappear
-
     if(!event.target.classList.contains('dropdown-button')){
       $(".dropdown-menu .menu-item li").removeClass("open");
     }
 
     // click on body makes the shop sorting menu disappear
-
     if(!event.target.classList.contains('sorting-button')){
       $(".filter-section .sorting li").removeClass("open");
     }
-  })
-
-  var burger= document.getElementById('burger');
-  // var closeBtn= document.getElementById('closebtn');
-  var sidebar= document.getElementById('mySidenav');
-
-  burger.addEventListener('click', openNav);
-  // closeBtn.addEventListener('click', closeNav)
-
-  function openNav(){
-    if(body.classList.contains('down')){
-      body.classList.remove('down');
-    }else{
-      body.classList.add('down');
-    }
   }
-  function closeNav() {
-    body.classList.remove('down');
-    sidebar.classList.remove('fade-in');
-    $("#burger-container").removeClass('open');
+
+  $('#burger').click(toggleNav);
+
+  //body animation for burger menu
+  function toggleNav(){
+    $('#bodyContainer').toggleClass('down');
   }
+
+  //burger menu animation
+  $("#burgerContainer").on('click', function(){
+      $(this).toggleClass("open");
+  });
 
   function createShopSection(){
     var i=1;

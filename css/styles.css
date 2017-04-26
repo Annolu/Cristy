@@ -32,20 +32,20 @@ h3 {
 
 .body-container {
   position: relative;
-  transition: all 400ms ease;
+  transition: all 200ms linear;
   z-index: 2;
   background-color: white; }
   .body-container.down {
-    transform: translateY(60px); }
+    transform: translateY(50px); }
 
 .central-panel {
   max-width: 960px;
   margin: 0 150px; }
 
 .button {
+  background-color: white;
   border: 2px solid #4bb899;
   padding: 6px 15px;
-  background-color: white;
   color: #434343;
   transition: all 200ms ease;
   text-align: center;
@@ -70,36 +70,19 @@ h3 {
       color: #434343; }
 
 .sidenav {
-  height: 0;
   width: 100%;
   position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
   background-color: #333333;
-  padding-top: 60px;
-  opacity: 1;
-  transition: all 200ms ease; }
-  .sidenav div {
-    text-align: center;
-    height: 0; }
+  text-align: center; }
   .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 15px;
     font-size: 17px;
     color: #8a8a8a;
     display: inline-block;
-    transition: 0.2s;
-    position: relative;
-    bottom: 45px; }
-    .sidenav a:hover, .sidenav a:focus {
+    transition: all 200ms ease;
+    position: relative; }
+    .sidenav a:hover {
       color: white; }
-  .sidenav .closebtn {
-    position: relative;
-    top: -65px;
-    right: 8px;
-    font-size: 30px;
-    float: right;
-    bottom: 61px; }
 
 .top-menu {
   border-bottom: 1px solid #e8e8e8;
@@ -154,7 +137,7 @@ h3 {
     color: #434343; }
 
 .submenu-dropdown {
-  z-index: 1;
+  z-index: 3;
   position: relative;
   padding: 0;
   margin: 0;
@@ -170,13 +153,10 @@ h3 {
     opacity: 0;
     display: none;
     height: auto;
-    transform-origin: center top; }
+    transform-origin: center top;
+    cursor: pointer; }
     .submenu-dropdown li:first-of-type {
       border-top: 1px solid #e8e8e8; }
-    .submenu-dropdown li a {
-      color: #8a8a8a; }
-      .submenu-dropdown li a:hover {
-        color: #434343; }
     .submenu-dropdown li.open:nth-child(1) {
       animation: fadein 200ms ease-in-out forwards;
       animation-delay: 100ms;
@@ -203,11 +183,13 @@ h3 {
   100% {
     transform: rotateX(0deg);
     opacity: 1; } }
-.top-right-menu .submenu-dropdown li a {
+.submenu-dropdown li a {
   color: #8a8a8a; }
-.top-right-menu .submenu-dropdown li:hover > a {
-  color: #434343; }
-.top-right-menu .topmenu-icon {
+.submenu-dropdown li:hover {
+  background-color: #fafafa; }
+  .submenu-dropdown li:hover a {
+    color: #434343; }
+.submenu-dropdown .topmenu-icon {
   height: 16px;
   width: 16px;
   background-size: contain;
@@ -215,9 +197,9 @@ h3 {
   position: relative;
   top: 2px;
   left: 6px; }
-  .top-right-menu .topmenu-icon.login {
+  .submenu-dropdown .topmenu-icon.login {
     background-image: url(../img/icons/login.svg); }
-  .top-right-menu .topmenu-icon.user {
+  .submenu-dropdown .topmenu-icon.user {
     background-image: url(../img/icons/user.svg); }
 
 .nav-bar {
