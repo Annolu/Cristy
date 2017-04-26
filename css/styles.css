@@ -514,8 +514,7 @@ h3 {
     height: 30px;
     width: 85px;
     display: block;
-    margin-top: 5px;
-    cursor: pointer; }
+    margin-top: 5px; }
   .violet-wrapper .textbox.reversed .rating-stars img {
     width: 10px;
     position: relative;

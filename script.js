@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  createShopSection()
     //body animation for burger menu
 
   $("#burger-container").on('click', function(){
@@ -20,27 +21,31 @@ $(document).ready(function(){
      prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/arrows/back-arrow-circular-symbol.svg"></button>'
   });
 
-    //make the top dropdown menu appear
+  //make the top dropdown menu appear
 
-  $(".dropdown-button").on('click', function(){
+  $(".dropdown-button").on('click', function(event){
+    event.preventDefault();
 
-  var list= $(this).next()[0].children;
-  var buttons = $(".dropdown-button").next();
+    //items in dropdown-menu list clicked on
+    var clickedList= $(this).next()[0].children;
+    //dropdown-menu lists
+    var lists = $(".dropdown-button").next();
 
-    //if click on the other buttons, the others menu disappear
-  for (lists of buttons){
-      var singleList =lists.children;
-      for (singleLi of singleList){
-        singleLi.classList.remove('open');
+      for (singleList of lists){
+
+        if(singleList.children==clickedList){
+          $(clickedList).toggleClass("open");
+        }else{
+          for(item of singleList.children){
+            item.classList.remove('open');
+          }
+        }
       }
-    }
-    $(list).toggleClass("open");
-  });
 
-    //toggle shop sorting menu
-
-  $(".sorting-button").on('click', function(){
-    $(".filter-section .sorting li").toggleClass("open");
+    //hide menus if target is not a button  
+    $(".sorting-button").on('click', function(){
+      $(".filter-section .sorting li").toggleClass("open");
+    });
   });
 
   var body= document.getElementById('body-container');
@@ -80,41 +85,43 @@ $(document).ready(function(){
     $("#burger-container").removeClass('open');
   }
 
-  var i=1;
-  var x=1;
+  function createShopSection(){
+    var i=1;
+    var x=1;
 
-  while (i<=2){
-    while(x<=4){
-      var shopItem= '<div class="shop-item">'+
-                        '<div class="grey-layer">'+
-                            '<div class="buttons-g">'+
-                                '<button class="view"></button>'+
-                                '<button class="bag"></button>'+
-                            '</div>'+
-                        '</div>'+
-                        '<img class="img-item" src="img/shoes/shoe-item'+x+'.jpg">'+
-                        '<div class="item-description">'+
-                          '<p class="item-name">Sperry Top-Slider Lanyard</p>'+
-                          '<p class="item-price">$300.00</p>'+
-                          '<span class="rating-stars">'+
-                              '<img src="img/star.svg">'+
-                              '<img src="img/star.svg">'+
-                              '<img src="img/star-grey.svg">'+
-                              '<img src="img/star-grey.svg">'+
-                          '</span>'+
-                        '</div>'+
-                      '</div>';
-      $('.items-grid').append(shopItem);
-      x++;
+    while (i<=2){
+      while(x<=4){
+        var shopItem= '<div class="shop-item">'+
+                          '<div class="grey-layer">'+
+                              '<div class="buttons-g">'+
+                                  '<button class="view"></button>'+
+                                  '<button class="bag"></button>'+
+                              '</div>'+
+                          '</div>'+
+                          '<img class="img-item" src="img/shoes/shoe-item'+x+'.jpg">'+
+                          '<div class="item-description">'+
+                            '<p class="item-name">Sperry Top-Slider Lanyard</p>'+
+                            '<p class="item-price">$300.00</p>'+
+                            '<span class="rating-stars">'+
+                                '<img src="img/star.svg">'+
+                                '<img src="img/star.svg">'+
+                                '<img src="img/star-grey.svg">'+
+                                '<img src="img/star-grey.svg">'+
+                            '</span>'+
+                          '</div>'+
+                        '</div>';
+        $('.items-grid').append(shopItem);
+        x++;
+      }
+      if(x>3){
+        x=1;
+      }
+      i++;
     }
-    if(x>3){
-      x=1;
-    }
-    i++;
+
+    var viewButton= '<div class="clear-fix"></div>' +
+                    '<button class="button">View All Products</button>';
+
+    $('.items-grid').append(viewButton);
   }
-
-  var viewButton= '<div class="clear-fix"></div>' +
-                  '<button class="button">View All Products</button>';
-
-   $('.items-grid').append(viewButton);
 });
