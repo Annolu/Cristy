@@ -16,8 +16,7 @@ $(document).ready(function(){
   });
 
   //make the top dropdown menu appear
-  $(".dropdown-button").on('click', function(event){
-    event.preventDefault();
+  $(".dropdown-button").on('click', function(){
 
     //items in dropdown-menu list clicked on
     var clickedList= $(this).next()[0].children;
@@ -78,8 +77,8 @@ $(document).ready(function(){
         var shopItem= '<div class="shop-item">'+
                           '<div class="grey-layer">'+
                               '<div class="buttons-g">'+
-                                  '<button class="view"></button>'+
-                                  '<button class="bag"></button>'+
+                                  '<a href="#"><span class="view"></span></a>'+
+                                  '<a href="#"><span class="bag"></span></a>'+
                               '</div>'+
                           '</div>'+
                           '<img class="img-item" src="img/shoes/shoe-item'+x+'.jpg">'+

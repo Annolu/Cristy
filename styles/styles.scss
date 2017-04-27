@@ -16,21 +16,26 @@ body{
 
 a{
   text-decoration: none;
+  font-weight: 500;
 }
 
 p{
   font-family: $font-sans-serif;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 h1{
   font-family: $main-font-serif;
+  font-weight: 500;
 }
 
 h3{
-  font-size: 16px;
+  font-size: 12px;
   margin: 5px 0 0 0;
   margin: 0;
   padding: 5px 0;
+  font-weight: 500;
 }
 
 .clear-fix {
@@ -50,8 +55,8 @@ h3{
 }
 
 .central-panel {
-  max-width: 960px;
-  margin: 0 150px;
+  max-width: 970px;
+  margin: 0 auto;
 }
 
 .button{
@@ -113,7 +118,7 @@ h3{
     float: right;
     width: 47%;
     >ul{
-      height: 30px;
+      height: 25px;
       display: inline-flex;
       padding: 0;
       float: right;
@@ -141,6 +146,7 @@ h3{
     margin: 0;
     border-right: 1px solid $border-colour;
     width: 85px;
+    font-size: 12px;
   }
   .arrow-down {
     display: inline-block;
@@ -151,6 +157,7 @@ h3{
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     margin-left: 7px;
+    pointer-events: none;
   }
   &.menu-down{
     display: block;
@@ -193,7 +200,7 @@ h3{
     &.open{
       @for $i from 1 through 4{
         &:nth-child(#{$i}){
-          animation: fadein 200ms ease-in-out forwards;
+          animation: rollDown 200ms ease-in-out forwards;
           animation-delay: $i * 100ms;
           display: block;
         }
@@ -202,7 +209,7 @@ h3{
   }
 }
 
-@keyframes fadein{
+@keyframes rollDown{
   0%{
     transform: rotateX(-90deg);
     opacity: 0;
@@ -223,6 +230,7 @@ h3{
     }
     &:hover{
       background-color: rgb(250,250,250);
+      // color: $dark-text;
       a{
         color: $dark-text;
       }
@@ -441,11 +449,7 @@ h3{
 }
 
 .filter-burger{
-  width: 80px;
-  height: 42px;
-  display: block;
   float: left;
-  position: relative;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all 200ms ease;
@@ -465,15 +469,13 @@ h3{
     height: 2px;
     margin-bottom: 2px;
     position: relative;
-    top: 0;
     transition: all 200ms ease;
   }
   p{
     display: inline-block;
     margin: 0 5px;
     position: relative;
-    bottom: 12px;
-    font-size: 12px;
+    bottom: 13px;
   }
 }
 
@@ -525,9 +527,6 @@ h3{
   box-sizing: border-box;
   position: relative;
   margin: 0 2%;
-  // &:nth-child(n+9){
-  //   display: none;
-  // }
   .item-description{
     position: relative;
     bottom: 15px;
@@ -548,15 +547,14 @@ h3{
 }
 
 .buttons-g{
-  width:83px;
-  margin:60% auto;
-  button{
+  width: 83px;
+  height: 100%;
+  margin: 60% auto;
+  span{
     height: 37px;
-    width: 38px;
-    position: relative;
+    width: 37px;
     float: left;
     cursor: pointer;
-    border: none;
     &.view{
       background-image: url(../img/shopbutton-eye.png);
       margin-right: 7px;
@@ -605,12 +603,12 @@ h3{
     float: left;
     position: relative;
     max-width: 50%;
-    font-family: $main-font-serif;
+    // font-family: $main-font-serif;
     font-size: 12px;
     h1{
       font-size: 36px;
       color: $dark-text;
-      font-weight: 400;
+      // font-weight: 400;
       margin: 0;
     }
     p{
@@ -674,7 +672,6 @@ h3{
       color: $dark-text;
       font-size: 14px;
       margin: 10px 0;
-      font-weight: 500;
     }
     p{
       font-size: 11px;
@@ -698,18 +695,17 @@ h3{
     background: white;
     a{
       font-family: $font-sans-serif;
-
+      &:hover{
+        color: $dark-text;
+      }
     }
     .nav-panels{
-      padding: 40px 0;
-      width: 100%;
-      margin-left: 20px;
+      padding-top: 40px;
       .nav{
         width: 25%;
         box-sizing: border-box;
         float: left;
         word-wrap: break-word;
-
       }
     }
   }
@@ -744,13 +740,13 @@ h3{
       &:focus{
         outline: none;
         &::-webkit-input-placeholder{
-            color:transparent;
+          color:transparent;
         }
       }
     }
     .bottomfooter-wrapper{
-        padding: 40px 0 10px 0;
-        display: block;
+      padding: 40px 0 10px 0;
+      display: block;
     }
   }
 }
@@ -761,7 +757,7 @@ h3{
       li{
         line-height: 20px;
         &:first-of-type{
-            margin-bottom: 7px;
+          margin-bottom: 7px;
         }
       }
     }
@@ -798,7 +794,6 @@ h3{
   display:none!important;
 }
 
-
 /*////////////////////////// media queries /////////////////////////*/
 
 @media screen and (min-width: 1234px){
@@ -813,11 +808,13 @@ h3{
   }
 }
 
-@media screen and (max-width: 970px){
-
+@media screen and (max-width: 1234px){
   .central-panel{
-    margin: 0 100px;
+    margin: 0px 100px;
   }
+}
+
+@media screen and (max-width: 970px){
 
   .shop-section{
     .shop-item{
@@ -874,7 +871,7 @@ h3{
     .shop-item{
       width: 46%;
       &:nth-child(n+5){
-          display: none;
+        display: none;
       }
     }
   }
@@ -893,7 +890,7 @@ h3{
       max-width: 100%;
     }
     .textbox{
-        max-width: 100%;
+      max-width: 100%;
     }
   }
 
@@ -916,7 +913,7 @@ h3{
       max-width:100%;
     }
     .violet-image{
-        max-width:100%;
+      max-width:100%;
     }
   }
 
@@ -940,16 +937,19 @@ h3{
 
   .sidenav{
     a{
-      padding: 2px 0px 0px 17px;
+      font-size: 15px;
+      padding: 15px 10px;
     }
   }
-
-  .left-banner{
-    float: none;
-    text-align: center;
-    padding: 0;
-    p{
-      padding: 6px 0;
+  .top-menu{
+    .left-banner{
+      float: none;
+      text-align: center;
+    }
+    .top-right-menu{
+      >ul{
+        float:none;
+      }
     }
   }
 
@@ -974,13 +974,5 @@ h3{
 
   .basket-search-box input[type=text] {
     right: -25px;
-  }
-
-  .top-menu{
-    .top-right-menu{
-      >ul{
-        float:none;
-      }
-    }
   }
 }
