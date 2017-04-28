@@ -15,6 +15,15 @@ $(document).ready(function(){
      prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/arrows/back-arrow-circular-symbol.svg"></button>'
   });
 
+  $('#toTop').on('click',function (e) {
+    e.preventDefault();
+
+    $('body').stop().animate({
+        'scrollTop': 1,
+        behavior: 'smooth'
+    }, 1200, 'swing');
+  })
+
   //make the top dropdown menu appear
   $(".dropdown-button").on('click', function(){
 

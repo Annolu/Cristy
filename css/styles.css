@@ -12,7 +12,8 @@ body {
 
 a {
   text-decoration: none;
-  font-weight: 500; }
+  font-weight: 500;
+  font-size: 12px; }
 
 p {
   font-family: "Raleway", sans-serif;
@@ -34,6 +35,24 @@ h3 {
   clear: both;
   content: '';
   height: 0; }
+
+.to-top {
+  width: 29px;
+  height: 30px;
+  display: block;
+  position: fixed;
+  bottom: 35px;
+  float: right;
+  right: 40px;
+  z-index: 5;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  font-size: 25px;
+  text-align: center;
+  padding: 0 5px;
+  border-radius: 3px; }
+  .to-top:hover {
+    background-color: #fafafa; }
 
 .body-container {
   position: relative;
@@ -68,7 +87,7 @@ h3 {
     background-color: #4bb899;
     color: white;
     float: left;
-    margin-bottom: 2%;
+    margin: 13px 0 0 0;
     transition: all 200ms ease; }
     .button.green:hover {
       background-color: white;
@@ -147,19 +166,14 @@ h3 {
   z-index: 3;
   position: relative;
   padding: 0;
-  margin: 0;
-  top: 9px; }
+  top: 10px; }
   .submenu-dropdown li {
-    list-style-type: none;
     border-bottom: 1px solid #e8e8e8;
     border-left: 1px solid #e8e8e8;
     border-right: 1px solid #e8e8e8;
     padding: 10px;
     background-color: white;
-    font-size: 13px;
     opacity: 0;
-    display: none;
-    height: auto;
     transform-origin: center top;
     cursor: pointer; }
     .submenu-dropdown li:first-of-type {
@@ -210,7 +224,14 @@ h3 {
     background-image: url(../img/icons/user.svg); }
 
 .nav-bar {
-  background-color: white; }
+  background-color: white;
+  transition: all 200ms linear;
+  position: absolute;
+  width: 100%; }
+  .nav-bar.navbar-fixed {
+    position: fixed;
+    z-index: 3;
+    top: 0; }
   .nav-bar .navbar-list {
     margin: 0;
     padding: 0; }
@@ -287,7 +308,8 @@ h3 {
   width: 33%; }
 
 .slider-section {
-  background-color: #eef1f8; }
+  background-color: #eef1f8;
+  padding-top: 90px; }
   .slider-section .violet-section {
     padding: 12% 0 9% 0; }
 
@@ -345,13 +367,15 @@ h3 {
   height: auto;
   background: white; }
   .shop-section .top-paragraph {
-    max-width: 500px;
+    max-width: 580px;
     margin: 0 auto;
     padding-top: 60px; }
     .shop-section .top-paragraph h1 {
       font-weight: 500;
       text-align: center;
       color: #434343; }
+    .shop-section .top-paragraph p {
+      font-size: 16px; }
 
 .filter-section {
   height: 50px;
@@ -381,7 +405,7 @@ h3 {
     display: inline-block;
     margin: 0 5px;
     position: relative;
-    bottom: 13px; }
+    bottom: 10px; }
 
 .filter-section .sorting {
   display: block;
@@ -390,9 +414,9 @@ h3 {
   font-family: "Raleway", sans-serif; }
   .filter-section .sorting .submenu-dropdown {
     position: absolute;
-    top: 40px; }
+    top: 20px; }
     .filter-section .sorting .submenu-dropdown li {
-      padding: 10px 78px 10px 15px; }
+      padding: 10px 82px 10px 15px; }
   .filter-section .sorting .sorting-button {
     border: 1px solid #e8e8e8;
     border: 1px solid #e8e8e8;
@@ -433,14 +457,15 @@ h3 {
     width: 100%;
     position: absolute;
     transition: all 200ms ease;
-    z-index: 2; }
+    z-index: 2;
+    border-radius: 3px; }
     .shop-item .grey-layer:hover {
       opacity: 1; }
 
 .buttons-g {
-  width: 83px;
-  height: 100%;
-  margin: 60% auto; }
+  width: 81px;
+  margin: 60% auto 0;
+  height: 38px; }
   .buttons-g span {
     height: 37px;
     width: 37px;
@@ -475,7 +500,7 @@ h3 {
 
 .violet-section {
   background-color: #eef1f8;
-  padding: 5%; }
+  padding: 5% 0; }
 
 .violet-wrapper .textbox {
   float: left;

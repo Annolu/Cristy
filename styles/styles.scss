@@ -17,6 +17,7 @@ body{
 a{
   text-decoration: none;
   font-weight: 500;
+  font-size: 12px;
 }
 
 p{
@@ -42,6 +43,26 @@ h3{
   clear: both;
   content: '';
   height: 0;
+}
+
+.to-top{
+  width: 29px;
+  height: 30px;
+  display: block;
+  position: fixed;
+  bottom: 35px;
+  float: right;
+  right: 40px;
+  z-index: 5;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  font-size: 25px;
+  text-align: center;
+  padding: 0 5px;
+  border-radius: 3px;
+  &:hover{
+    background-color: #fafafa;
+  }
 }
 
 .body-container{
@@ -82,7 +103,7 @@ h3{
     background-color: $main-green;
     color: white;
     float: left;
-    margin-bottom: 2%;
+    margin: 13px 0 0 0;
     transition: all 200ms ease;
     &:hover{
       background-color: white;
@@ -179,19 +200,19 @@ h3{
   z-index: 3;
   position: relative;
   padding: 0;
-  margin: 0;
-  top: 9px;
+  // margin: 0;
+  top: 10px;
   li{
-    list-style-type: none;
+    // list-style-type: none;
     border-bottom: 1px solid $border-colour;
     border-left: 1px solid $border-colour;
     border-right: 1px solid $border-colour;
     padding: 10px;
     background-color: white;
-    font-size: 13px;
+    // font-size: 13px;
     opacity: 0;
-    display: none;
-    height: auto;
+    // display: none;
+    // height: auto;
     transform-origin: center top;
     cursor: pointer;
     &:first-of-type{
@@ -255,6 +276,14 @@ h3{
 
 .nav-bar{
   background-color: white;
+  transition: all 200ms linear;
+  position: absolute;
+  width: 100%;
+  &.navbar-fixed{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+  }
   .navbar-list{
     margin: 0;
     padding: 0;
@@ -356,6 +385,7 @@ h3{
 
 .slider-section{
   background-color: $main-bg-light;
+  padding-top: 90px;
   .violet-section{
     padding: 12% 0 9% 0;
   }
@@ -432,13 +462,16 @@ h3{
   height: auto;
   background: white;
   .top-paragraph{
-    max-width: 500px;
+    max-width: 580px;
     margin: 0 auto;
     padding-top: 60px;
     h1{
       font-weight: 500;
       text-align: center;
       color: $dark-text;
+    }
+    p{
+      font-size: 16px;
     }
   }
 }
@@ -475,7 +508,7 @@ h3{
     display: inline-block;
     margin: 0 5px;
     position: relative;
-    bottom: 13px;
+    bottom: 10px;
   }
 }
 
@@ -487,9 +520,9 @@ h3{
     font-family: "Raleway", sans-serif;
     .submenu-dropdown{
       position: absolute;
-      top: 40px;
+      top: 20px;
       li{
-        padding: 10px 78px 10px 15px;
+        padding: 10px 82px 10px 15px;
       }
     }
     .sorting-button{
@@ -540,6 +573,7 @@ h3{
     position: absolute;
     transition: all 200ms ease;
     z-index: 2;
+    border-radius: 3px;
     &:hover{
       opacity: 1;
     }
@@ -547,9 +581,10 @@ h3{
 }
 
 .buttons-g{
-  width: 83px;
-  height: 100%;
-  margin: 60% auto;
+  width: 81px;
+  // height: 100%;
+  margin: 60% auto 0;
+  height: 38px;
   span{
     height: 37px;
     width: 37px;
@@ -595,7 +630,7 @@ h3{
 
 .violet-section{
   background-color: $main-bg-light;
-  padding: 5%;
+  padding: 5% 0;
 }
 
 .violet-wrapper{
