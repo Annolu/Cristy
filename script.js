@@ -18,10 +18,19 @@ $(document).ready(function(){
   $('#toTop').on('click',function (e) {
     e.preventDefault();
 
-    $('body').stop().animate({
+    $('html,body').stop().animate({
         'scrollTop': 1,
         behavior: 'smooth'
-    }, 1200, 'swing');
+    }, 800, 'swing');
+  })
+
+  $(document).scroll(function(){
+    var distanceFromTop= $(document).scrollTop();
+    if(distanceFromTop>50){
+      $('#toTop').addClass('slide-in');
+    }else{
+      $('#toTop').removeClass('slide-in');
+    }
   })
 
   //make the top dropdown menu appear
