@@ -8,11 +8,11 @@ body {
   top: 0;
   font-family: "Slabo 27px", serif;
   color: #8a8a8a;
-  position: relative; }
+  position: relative;
+  font-weight: 500; }
 
 a {
-  text-decoration: none;
-  font-weight: 500; }
+  text-decoration: none; }
 
 p {
   font-family: "Raleway", sans-serif;
@@ -38,7 +38,7 @@ h3 {
   max-width: 970px;
   margin: 0 auto; }
 
-.to-top, .to-top:active {
+.to-top {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -46,7 +46,7 @@ h3 {
   position: fixed;
   bottom: 33px;
   float: right;
-  right: 40px;
+  right: 30px;
   z-index: 5;
   border: 1px solid transparent;
   cursor: pointer;
@@ -57,17 +57,19 @@ h3 {
   color: white;
   transform: translateY(63px);
   font-family: "Playfair Display", serif; }
-  .to-top i, .to-top:active i {
+  .to-top:focus {
+    outline: none; }
+  .to-top i {
     display: block;
     font-size: 21px; }
-  .to-top.slide-in, .to-top:active.slide-in {
+  .to-top.slide-in {
     opacity: 1;
     transform: translateY(0px); }
-  .to-top:hover, .to-top:active:hover {
+  .to-top:hover {
     background-color: white;
     border: 1px solid #4bb899;
     color: #8a8a8a; }
-  .to-top p, .to-top:active p {
+  .to-top p {
     font-size: 17px;
     margin: 0; }
 
@@ -210,7 +212,8 @@ h3 {
     transform: rotateX(0deg);
     opacity: 1; } }
 .submenu-dropdown li a {
-  color: #8a8a8a; }
+  color: #8a8a8a;
+  font-size: 12px; }
 .submenu-dropdown li:hover {
   background-color: #fafafa; }
   .submenu-dropdown li:hover a {
@@ -273,8 +276,7 @@ h3 {
 
 .central-logo h1 {
   text-align: center;
-  color: #434343;
-  font-weight: 500; }
+  color: #434343; }
 
 .basket-search-box .basket-search {
   margin-top: 22px; }
@@ -353,7 +355,6 @@ h3 {
 .single-slide h1 {
   color: #4bb899;
   font-size: 50px;
-  font-weight: 500;
   margin: 0; }
 .single-slide p {
   margin: 5px 0;
@@ -376,7 +377,6 @@ h3 {
     margin: 0 auto;
     padding-top: 60px; }
     .shop-section .top-paragraph h1 {
-      font-weight: 500;
       text-align: center;
       color: #434343; }
     .shop-section .top-paragraph p {
@@ -559,15 +559,14 @@ h3 {
     .article-section .article h4 {
       color: #434343;
       font-size: 14px;
-      margin: 10px 0; }
+      margin: 10px 0;
+      font-weight: 500; }
     .article-section .article p {
       font-size: 11px;
       margin: 7px 0;
-      line-height: 20px;
-      font-weight: 500; }
+      line-height: 20px; }
     .article-section .article a {
-      color: #4bb899;
-      font-weight: 500; }
+      color: #4bb899; }
       .article-section .article a:hover {
         text-decoration: underline; }
 

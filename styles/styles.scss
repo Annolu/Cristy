@@ -12,11 +12,11 @@ body{
   font-family: $minor-font-serif;
   color: $dark-text-muted;
   position: relative;
+  font-weight: 500;
 }
 
 a{
   text-decoration: none;
-  font-weight: 500;
 }
 
 p{
@@ -48,7 +48,7 @@ h3{
   margin: 0 auto;
 }
 
-.to-top, .to-top:active{
+.to-top{
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -56,17 +56,20 @@ h3{
   position: fixed;
   bottom: 33px;
   float: right;
-  right: 40px;
+  right: 30px;
   z-index: 5;
   border: 1px solid transparent;
   cursor: pointer;
   font-size: 17px;
   text-align: center;
   transition: all 400ms ease;
-  background-color: #4bb899;
+  background-color: $main-green;
   color: white;
   transform: translateY(63px);
   font-family: $main-font-serif;
+  &:focus{
+    outline: none;
+  }
   i{
     display: block;
     font-size: 21px;
@@ -208,19 +211,14 @@ h3{
   z-index: 3;
   position: relative;
   padding: 0;
-  // margin: 0;
   top: 10px;
   li{
-    // list-style-type: none;
     border-bottom: 1px solid $border-colour;
     border-left: 1px solid $border-colour;
     border-right: 1px solid $border-colour;
     padding: 10px;
     background-color: white;
-    // font-size: 13px;
     opacity: 0;
-    // display: none;
-    // height: auto;
     transform-origin: center top;
     cursor: pointer;
     &:first-of-type{
@@ -256,10 +254,10 @@ h3{
   li{
     a{
       color: $dark-text-muted;
+      font-size: 12px;
     }
     &:hover{
       background-color: rgb(250,250,250);
-      // color: $dark-text;
       a{
         color: $dark-text;
       }
@@ -343,7 +341,6 @@ h3{
   h1{
     text-align: center;
     color: $dark-text;
-    font-weight: 500;
   }
 }
 
@@ -389,7 +386,6 @@ h3{
   float:left;
   width:33%;
 }
-
 
 .slider-section{
   background-color: $main-bg-light;
@@ -445,7 +441,6 @@ h3{
   h1{
     color: $main-green;
     font-size: 50px;
-    font-weight: 500;
     margin: 0;
   }
   p{
@@ -474,7 +469,6 @@ h3{
     margin: 0 auto;
     padding-top: 60px;
     h1{
-      font-weight: 500;
       text-align: center;
       color: $dark-text;
     }
@@ -587,7 +581,6 @@ h3{
 
 .buttons-g{
   width: 81px;
-  // height: 100%;
   margin: 60% auto 0;
   height: 38px;
   span{
@@ -643,12 +636,10 @@ h3{
     float: left;
     position: relative;
     max-width: 50%;
-    // font-family: $main-font-serif;
     font-size: 12px;
     h1{
       font-size: 36px;
       color: $dark-text;
-      // font-weight: 400;
       margin: 0;
     }
     p{
@@ -712,17 +703,15 @@ h3{
       color: $dark-text;
       font-size: 14px;
       margin: 10px 0;
+      font-weight: 500;
     }
     p{
       font-size: 11px;
       margin: 7px 0;
       line-height: 20px;
-      font-weight: 500;
-
     }
     a{
       color: $main-green;
-      font-weight: 500;
       &:hover{
         text-decoration: underline;
       }
@@ -991,7 +980,6 @@ h3{
     }
     .top-right-menu{
       width: 100%;
-
       >ul{
         float:none;
       }

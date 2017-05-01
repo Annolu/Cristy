@@ -121,7 +121,7 @@ $(document).ready(function(){
     }
 
     var viewButton= '<div class="clear-fix"></div>' +
-                    '<button class="button">View All Products</button>';
+                    '<a href="#"><button class="button">View All Products</button></a>';
 
     $('.items-grid').append(viewButton);
   }
