@@ -15,6 +15,8 @@ $(document).ready(function(){
      prevArrow: '<button type="button" class="arrow arrow-prev"><img src="img/arrows/back-arrow-circular-symbol.svg"></button>'
   });
 
+  //scroll to top when click on to-top button
+
   $('#toTop').on('click',function (e) {
     e.preventDefault();
 
@@ -23,6 +25,8 @@ $(document).ready(function(){
         behavior: 'smooth'
     }, 800, 'swing');
   })
+
+  //to-top button appears on scroll
 
   $(document).scroll(function(){
     var distanceFromTop= $(document).scrollTop();
@@ -46,7 +50,7 @@ $(document).ready(function(){
       if(singleList.children==clickedList){
         $(clickedList).toggleClass("open");
       }else{
-        for(item of singleList.children){
+        for(item of Array.from(singleList.children)){
           item.classList.remove('open');
         }
       }
@@ -86,6 +90,7 @@ $(document).ready(function(){
       $(this).toggleClass("open");
   });
 
+  //create shop section dynamically
   function createShopSection(){
     var i=1;
     var x=1;
