@@ -832,7 +832,7 @@ h3{
 
 /*////////////////////////// media queries /////////////////////////*/
 
-@media screen and (min-width: 1234px){
+@media screen and (min-width: 1290px){
 
   .arrow{
     .arrow-next{
@@ -840,6 +840,12 @@ h3{
     }
     .arrow-prev{
       left: -130px;
+    }
+  }
+  
+  .slider-section{
+    .violet-section{
+      padding: 18% 0;
     }
   }
 }

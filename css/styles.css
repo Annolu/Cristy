@@ -657,11 +657,14 @@ h3 {
   display: none !important; }
 
 /*////////////////////////// media queries /////////////////////////*/
-@media screen and (min-width: 1234px) {
+@media screen and (min-width: 1290px) {
   .arrow .arrow-next {
     right: -130px; }
   .arrow .arrow-prev {
-    left: -130px; } }
+    left: -130px; }
+
+  .slider-section .violet-section {
+    padding: 18% 0; } }
 @media screen and (max-width: 1234px) {
   .central-panel {
     margin: 0px 100px; } }
